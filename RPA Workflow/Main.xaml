@@ -1,0 +1,255 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_customerName="Johny" this:Main.in_channel="chat" this:Main.in_message=" Hi there, I'm having trouble resetting my password. Fuck your business, piece of shit"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common"
+ xmlns:this="clr-namespace:"
+ xmlns:uasj="clr-namespace:UiPath.Activities.System.Jobs;assembly=UiPath.System.Activities"
+ xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities"
+ xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities"
+ xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:upad="clr-namespace:UiPath.Platform.Activities.DataMapping;assembly=UiPath.Platform"
+ xmlns:upd="clr-namespace:UiPath.Platform.DataMapping;assembly=UiPath.Platform"
+ xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities"
+ xmlns:usavsab="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle;assembly=Agent_Input.5Okds1t6DNK1vQU2RVHFU02"
+ xmlns:usavsab1="clr-namespace:UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle;assembly=Agent_Output.jhuJ7YddGQ1lUcou26uGNm"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_email" Type="OutArgument(x:String)" />
+    <x:Property Name="in_customerName" Type="InArgument(x:String)" />
+    <x:Property Name="in_channel" Type="InArgument(x:String)" />
+    <x:Property Name="in_message" Type="InArgument(x:String)" />
+    <x:Property Name="in_history" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.in_history>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_history>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="65">
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Excel.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Sharepoint</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Activities.System.Jobs</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>Microsoft.Rest</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Utilities</x:String>
+      <x:String>UiPath.Productivity.Activities.Diagnostics</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Triggers</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle</x:String>
+      <x:String>UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Contracts</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+      <AssemblyReference>Agent_Input.5Okds1t6DNK1vQU2RVHFU02</AssemblyReference>
+      <AssemblyReference>Agent_Output.jhuJ7YddGQ1lUcou26uGNm</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>Microsoft.Rest.ClientRuntime</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="usavsab1:Agent_Output" Default="[new UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle.Agent_Output]" Name="output" />
+      <Variable x:TypeArguments="x:String" Name="escalation" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[new System.Data.DataTable With {.TableName = &quot;TableName&quot;}]" Name="dt_Customers" />
+      <Variable x:TypeArguments="upr:ILocalResource" Name="file">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">DownloadStorageFile_1</x:String>
+            <x:String x:Key="SourcePropertyName">Result</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="CustomerEmails.xlsx" DisplayName="Download Storage File" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="CustomerEmails.xlsx" Result="[file]" StorageBucketName="CustomersEmails" />
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_Customers]" DisplayName="Read Range Workbook" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="CustomerEmails.xlsx" />
+    <uasj:RunJob FolderPath="{x:Null}" Job="{x:Null}" ContinueOnError="False" DisplayName="Run Agent: Agent" ExecutionMode="Busy" FailWhenFaulted="False" sap2010:WorkflowViewState.IdRef="RunJob_1" ProcessName="Agent" TimeoutMS="600000">
+      <uasj:RunJob.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </uasj:RunJob.Arguments>
+      <uasj:RunJob.Input>
+        <InArgument x:TypeArguments="usavsab:Agent_Input">
+          <upad:DataMappingPocoActivity x:TypeArguments="usavsab:Agent_Input" sap2010:WorkflowViewState.IdRef="DataMappingPocoActivity`1_1" ParentPath="">
+            <upad:DataMappingPocoActivity.MappingInputs>
+              <scg:List x:TypeArguments="upd:MappingInput" Capacity="4">
+                <upd:MappingInput PropertyName="channel" PropertyType="x:String">
+                  <upd:MappingInput.Value>
+                    <InArgument x:TypeArguments="x:String">[in_channel]</InArgument>
+                  </upd:MappingInput.Value>
+                </upd:MappingInput>
+                <upd:MappingInput PropertyName="customer_5F_name" PropertyType="x:String">
+                  <upd:MappingInput.Value>
+                    <InArgument x:TypeArguments="x:String">[in_customerName]</InArgument>
+                  </upd:MappingInput.Value>
+                </upd:MappingInput>
+                <upd:MappingInput PropertyName="message" PropertyType="x:String">
+                  <upd:MappingInput.Value>
+                    <InArgument x:TypeArguments="x:String">[in_message]</InArgument>
+                  </upd:MappingInput.Value>
+                </upd:MappingInput>
+                <upd:MappingInput PropertyName="history" PropertyType="scg:List(usavsab:history)">
+                  <upd:MappingInput.Value>
+                    <InArgument x:TypeArguments="scg:List(usavsab:history)">
+                      <upad:DataMappingEnumerableActivity x:TypeArguments="usavsab:history, x:Char, scg:List(usavsab:history)" CurrentIndexName="history_currentIndex1" CurrentValueName="history_currentValue1" PropertyName="history" Values="[in_history]">
+                        <ActivityFunc x:TypeArguments="x:Char, x:Int32, usavsab:history">
+                          <ActivityFunc.Argument1>
+                            <DelegateInArgument x:TypeArguments="x:Char" Name="history_currentValue1" />
+                          </ActivityFunc.Argument1>
+                          <ActivityFunc.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="history_currentIndex1" />
+                          </ActivityFunc.Argument2>
+                        </ActivityFunc>
+                      </upad:DataMappingEnumerableActivity>
+                    </InArgument>
+                  </upd:MappingInput.Value>
+                </upd:MappingInput>
+              </scg:List>
+            </upad:DataMappingPocoActivity.MappingInputs>
+          </upad:DataMappingPocoActivity>
+        </InArgument>
+      </uasj:RunJob.Input>
+      <uasj:RunJob.Output>
+        <OutArgument x:TypeArguments="usavsab1:Agent_Output">[output]</OutArgument>
+      </uasj:RunJob.Output>
+    </uasj:RunJob>
+    <WriteLine DisplayName="Write Line" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[string.Format(&quot;{0}&quot;, dt_Customers)]" />
+    <Assign DisplayName="Assign Variable Value" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[out_email]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[output.email + " " ]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign Variable Value 1" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[escalation]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[string.Format("{0}", output.escalation.required)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[escalation = &quot;True&quot;]" DisplayName="If" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[new System.Object() { string.Format(&quot;{0}&quot;, (dt_Customers.Rows.Count() + 1).ToString),string.Format(&quot;{0}&quot;, in_channel),string.Format(&quot;{0}&quot;, in_customerName),string.Format(&quot;{0}&quot;, in_message),string.Format(&quot;{0}&quot;, in_history) }]" DataTable="[dt_Customers]" DisplayName="Add Data Row" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          <ui:LogMessage DisplayName="Log Message 1" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[(dt_Customers.Rows.Count()+1).ToString + &quot; &quot; + in_channel + &quot; &quot; + in_customerName + &quot; &quot; + in_message + &quot; &quot; + in_history]" />
+          <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[dt_Customers]" DisplayName="Write Range Workbook" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="CustomerEmails.xlsx" />
+          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" Attachments="[Enumerable.Repeat(file, 1).ToList()]" AuthScopesInvalid="False" Body="[&quot;Reason: &quot; + output.escalation.reason + Environment.NewLine +&#xA;string.Format(&quot;&lt;p&gt;{0}&lt;/p&gt;&quot;, out_email)]" ConnectionId="a1ffe533-ddbb-4218-89c3-5e3d19da13b9" DisplayName="Send Email" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Assistance Required " To="[New String(){&quot;uipathrpatest1234@gmail.com&quot;}]" UseConnectionService="True">
+            <uga:SendEmailConnections.AttachmentsBackup>
+              <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                <usau:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                </usau:BackupSlot.BackupValues>
+              </usau:BackupSlot>
+            </uga:SendEmailConnections.AttachmentsBackup>
+            <uga:SendEmailConnections.InputTypeBackup>
+              <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                <usau:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                </usau:BackupSlot.BackupValues>
+              </usau:BackupSlot>
+            </uga:SendEmailConnections.InputTypeBackup>
+          </uga:SendEmailConnections>
+          <ucas:DeleteStorageFile TimeoutMS="{x:Null}" DisplayName="Delete Storage File" sap2010:WorkflowViewState.IdRef="DeleteStorageFile_1" Path="CustomerEmails.xlsx" StorageBucketName="CustomersEmails" />
+          <ucas:UploadStorageFile Path="{x:Null}" TimeoutMS="{x:Null}" Destination="CustomerEmails.xlsx" DisplayName="Upload Storage File" FileResource="[file]" sap2010:WorkflowViewState.IdRef="UploadStorageFile_1" StorageBucketName="CustomersEmails" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
+      </If.Else>
+    </If>
+    <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[string.Format(&quot;{0}&quot;, out_email)]" />
+  </Sequence>
+</Activity>

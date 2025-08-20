@@ -1,0 +1,116 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "p9RmkGmKvIVl9TCyd8fQkGNreWkPgJhzliC2FKKaEQ",
+  "discardedAssemblyNames": [
+    "Agent_Output.eGuIt71bTL1GglM92Se98l",
+    "Agent_Input.FprHF4WP2sF1p5rBU15ggRW2",
+    "Agent_Output.qqRWj2nY13D1ILeTY4kcMn1",
+    "Agent_Input.Q3JBt3af1C1Pd4Ln37qc9L4",
+    "Agent_Output.9ld8G2P0muA1CawCD3H1kRr1",
+    "Agent_Output.wfQWi1rR5HQ1r8sgb2jUHTP",
+    "Agent_Input.nedu916rMmS1pYfWy28dCeB3",
+    "Agent_Input.FvKXP21xyFR1VDdLt1Z2xLc1"
+  ],
+  "discardedAssemblyReplacements": {
+    "Agent_Output.eGuIt71bTL1GglM92Se98l": "Agent_Output.qqRWj2nY13D1ILeTY4kcMn1",
+    "Agent_Input.FprHF4WP2sF1p5rBU15ggRW2": "Agent_Input.Q3JBt3af1C1Pd4Ln37qc9L4",
+    "Agent_Output.qqRWj2nY13D1ILeTY4kcMn1": "Agent_Output.9ld8G2P0muA1CawCD3H1kRr1",
+    "Agent_Input.Q3JBt3af1C1Pd4Ln37qc9L4": "Agent_Input.nedu916rMmS1pYfWy28dCeB3",
+    "Agent_Output.9ld8G2P0muA1CawCD3H1kRr1": "Agent_Output.wfQWi1rR5HQ1r8sgb2jUHTP",
+    "Agent_Output.wfQWi1rR5HQ1r8sgb2jUHTP": "Agent_Output.jhuJ7YddGQ1lUcou26uGNm",
+    "Agent_Input.nedu916rMmS1pYfWy28dCeB3": "Agent_Input.FvKXP21xyFR1VDdLt1Z2xLc1",
+    "Agent_Input.FvKXP21xyFR1VDdLt1Z2xLc1": "Agent_Input.5Okds1t6DNK1vQU2RVHFU02"
+  },
+  "assembliesJitInfo": {
+    "Agent_Input.FprHF4WP2sF1p5rBU15ggRW2": {
+      "createdAt": "2025-07-28T08:09:28.0351816+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle",
+      "typeNames": [
+        "Agent_Input",
+        "history"
+      ]
+    },
+    "Agent_Output.eGuIt71bTL1GglM92Se98l": {
+      "createdAt": "2025-07-28T08:09:28.5703368+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle",
+      "typeNames": [
+        "Agent_Output",
+        "escalation"
+      ]
+    },
+    "Agent_Input.Q3JBt3af1C1Pd4Ln37qc9L4": {
+      "createdAt": "2025-07-29T08:08:29.6044+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle",
+      "typeNames": [
+        "Agent_Input",
+        "history"
+      ]
+    },
+    "Agent_Output.qqRWj2nY13D1ILeTY4kcMn1": {
+      "createdAt": "2025-07-29T08:08:29.937357+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle",
+      "typeNames": [
+        "Agent_Output",
+        "escalation"
+      ]
+    },
+    "Agent_Output.9ld8G2P0muA1CawCD3H1kRr1": {
+      "createdAt": "2025-07-29T08:38:46.2685376+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle",
+      "typeNames": [
+        "Agent_Output",
+        "escalation"
+      ]
+    },
+    "Agent_Input.nedu916rMmS1pYfWy28dCeB3": {
+      "createdAt": "2025-07-29T09:40:35.4551002+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle",
+      "typeNames": [
+        "Agent_Input",
+        "history"
+      ]
+    },
+    "Agent_Output.wfQWi1rR5HQ1r8sgb2jUHTP": {
+      "createdAt": "2025-07-29T10:51:49.3980576+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle",
+      "typeNames": [
+        "Agent_Output",
+        "escalation"
+      ]
+    },
+    "Agent_Output.jhuJ7YddGQ1lUcou26uGNm": {
+      "createdAt": "2025-07-29T11:08:15.0080043+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Output.Bundle",
+      "typeNames": [
+        "Agent_Output",
+        "escalation"
+      ]
+    },
+    "Agent_Input.FvKXP21xyFR1VDdLt1Z2xLc1": {
+      "createdAt": "2025-07-29T11:08:23.7968811+00:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle",
+      "typeNames": [
+        "Agent_Input",
+        "history"
+      ]
+    },
+    "Agent_Input.5Okds1t6DNK1vQU2RVHFU02": {
+      "createdAt": "2025-07-29T16:15:28.978+03:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.System.Activities.ViewModels.SWEntities.Agent_Input.Bundle",
+      "typeNames": [
+        "Agent_Input",
+        "history"
+      ]
+    }
+  }
+}
